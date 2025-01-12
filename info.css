@@ -1,0 +1,13 @@
+/* inf.css */
+body {
+    font-family: Arial, sans-serif;
+    width: 85%;
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
+    color: #fff;
+    background: url('fon.jpeg') ;
+    background-size: cover;
+    line-height: 1.6;
+    padding: 80px;
+    font-size: 20px;
+    margin: 10px -10px 10px;
+}

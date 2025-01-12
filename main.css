@@ -1,0 +1,206 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('fon.jpeg') ;
+    background-size: cover;
+}
+
+/* Название Канторки */
+.main-title {
+    font-size: 8em;
+    text-align: right;
+    color: #fff;
+    margin-left: 100px;
+    margin-top: 70px;
+    display: inline-block;
+    border: 6px solid transparent;
+    border-image: linear-gradient(to bottom right, #ffffff 0%, transparent 40%);
+    border-image-slice: 2;
+    padding: 20px 20px;
+    
+}
+
+/* Центрированный текст */
+.logo-text {
+    text-align: right; /* Выравнивание текста по правому краю */
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 70px 100px 0 auto; /* Отступ сверху 5px, справа 50px */
+    position: relative;
+}
+
+/* Слоган */
+.slogan {
+    position: relative;
+    z-index: 8; /* Под холстом */
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    margin: 30px auto; /* Увеличен отступ сверху */
+    color: #fff;
+    transform: translateX(150px); /* Сдвиг на 13px влево от центра */
+}
+
+/* Изображение руки */
+.hand-image {
+    z-index: 12; /* Над холстом */
+    position: absolute; /* Для точного позиционирования */
+    top: 440px; /* Отступ от верхнего края */
+    right: 160px; /* Отступ от правого края */
+    width: 150px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+
+.fixed-button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Контейнер для холста */
+#canvas-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -75px; /* Расстояние от верхнего контента */
+    margin-left: 130px;
+}
+
+/* Холст */
+#canvas {
+    background: url('http://www.topscratchcards.com/images/games/888ladies/scratchcard-winning-ticket.jpg');
+    background-size: cover;
+    width: 1000px;
+    height: 130px;
+    border-radius: 80px; /* Закругленные края */
+    position: absolute;
+    z-index: 10; /* Перекрывает слоган */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Эффект тени */
+    overflow: hidden; /* Чтобы содержимое не выходило за границы */
+
+
+}
+
+/* Раздел "Мы предоставляем" */
+.section-title {
+    text-shadow:
+    -5px -5px 0 #000,  
+     5px -5px 0 #000,
+    -5px  5px 0 #000,
+     5px  5px 0 #000;
+    text-align: center;
+    font-size: 90px;
+    margin: 260px 0 -40px;
+}
+
+/* Элементы content */
+.content {
+    padding: 100px;
+}
+
+.line {
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin: 29px 0;
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 65px;
+    background: rgba(0, 0, 0, 0.8);
+    max-width: 100%;
+    width: 950px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Чередование строк по краям */
+.line:nth-child(odd) {
+    margin-left: 2%;
+}
+
+.line:nth-child(even) {
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+/* Центрированный текст */
+.center-text {
+    text-shadow:
+    -5px -5px 0 #000,  
+     5px -5px 0 #000,
+    -5px  5px 0 #000,
+     5px  5px 0 #000;
+    font-size: 45px;
+    margin-left: 300px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+}
+
+/* Описание */
+.description {
+    font-weight: bold;
+    padding: 40px;
+    font-size: 25px;
+    line-height: 1.8;
+    margin: 10px;
+}
+
+/* Список описания */
+.description ul {
+    padding-left: 120px;
+}
+
+.description li {
+    margin: 100px 0;
+}
+
+/* Продукты */
+.products {
+    text-align: center;
+    margin: 50px 0 40px;
+}
+
+.product-button {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    padding: 40px 60px;
+    font-size: 40px;
+    cursor: pointer;
+    margin: 50px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.product-button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Фиксированная кнопка "Связаться с нами" */
+.fixed-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
